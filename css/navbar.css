@@ -18,7 +18,7 @@
                 display: inline-block;
             }
 
-            .navbar li:hover {
+            .navbar li:hover:not(#name) {
                 background-color: red;
             }
 
@@ -40,3 +40,4 @@
             .navbar .active{
                 background-color: red;
             }
+
