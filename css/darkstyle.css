@@ -8,10 +8,12 @@
                 font-size:100px;
             }
             p{
-                color:blanchedalmond
+                color:blanchedalmond;
+                text-align:left;
+                float:0px;
             }
             li{
-                color:blanchedalmond
+                color:blanchedalmond;
             }
             .purplebg{
                 background-color:#8636d1
