@@ -19,6 +19,9 @@
                 height: 100%;
                 width: 56%;
                 float: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             #right_pane{
                 background-color: blue;
@@ -28,11 +31,31 @@
             }
             #story_text{
                 background-color: yellow;
-                height: 80%;
-                float: right;
+                height: 80%;    
+                color: black;
+                font-weight: bold;            
             }
             #button_choices{
-
+                background-color: pink;
+                height: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #story_img{
+                max-height: 97%;
+                max-width: 97%;
+                width: auto;
+                height: auto;
+            }
+            .buttons{
+                text-decoration: none;
+                color: white;
+                background-color: black;
+                padding: 10px;
+                border-radius: 8px;
+                font-size: 16px;
+                margin: 10px;
             }
         </style>
 
@@ -55,10 +78,19 @@
         </ul>
 
     <div id="container">
-        <div id="left_pane"></div>
-        <div id="right_pane"></div>
-            <div id="story_text"></div>
-            <div id="button_choices"></div>
+        <div id="left_pane">
+            <img id="story_img" src="images/peace.jpg">
+        </div>
+        <div id="right_pane">
+            <div id="story_text">
+                <p>Would you like a Travy patty?</p>
+                <p></p>
+            </div>
+            <div id="button_choices">
+                <a class="buttons" href="">Yes</a>
+                <a class="buttons" href="">No</a>
+            </div>
+        </div>
     </div>
 
     </body>
