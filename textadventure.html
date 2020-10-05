@@ -3,19 +3,15 @@
     <head>
         <title>Page Title</title>
         <link rel="stylesheet" type="text/css" href="css/navbar.css">
-    </head>
-    <body>
-        <style>
+                <style>
             #container{
                 position: absolute;
                 Left: 0px;
                 Right: 0px;
                 top: 90px;
                 bottom: 0px;
-                background-color: red;
             }
             #left_pane{
-                background-color: green;
                 height: 100%;
                 width: 56%;
                 float: left;
@@ -24,19 +20,16 @@
                 justify-content: center;
             }
             #right_pane{
-                background-color: blue;
                 height: 100%;
                 width: 44%;
                 float: left;
             }
             #story_text{
-                background-color: yellow;
                 height: 80%;    
                 color: black;
                 font-weight: bold;            
             }
             #button_choices{
-                background-color: pink;
                 height: 20%;
                 display: flex;
                 align-items: center;
@@ -58,6 +51,9 @@
                 margin: 10px;
             }
         </style>
+    </head>
+    <body>
+
 
 
         <ul class="navbar">
@@ -83,15 +79,37 @@
         </div>
         <div id="right_pane">
             <div id="story_text">
-                <p>Would you like a Travy patty?</p>
-                <p></p>
+                <p id="p1">Would you like to go on an epic adventure for a Travy patty?</p>
+                <p id="p2"></p>
+                <p id="p3"></p>
             </div>
             <div id="button_choices">
-                <a class="buttons" href="">Yes</a>
-                <a class="buttons" href="">No</a>
+                <a id="b1" class="buttons" href="" onclick="bclick(1)">Yes</a>
+                <a id="b2"class="buttons" href="" onclick="bclick(2)">No</a>
             </div>
         </div>
     </div>
 
+    <script>
+        var b1 = document.getElementById("b1");
+        var b2 = document.getElementById("b2");
+        var img = document.getElementById("story_img");
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        var state = "start";
+
+        start();
+        function start(){
+            img.src = "images/krabbypatty.jpg";
+            b1.innerHTML = "YES!!!";
+            b2.innerHTML = "no :(";
+            p1.innerHTML = "Welcome to the most epic text adventure project ever.";
+            p2.innerHTML = "It is 2020 and the hottest item on the McDonalds menu is the Travy Patty, You are Joe and you need the Travy Patty.";
+            p3.innerHTML = "Are you ready for this most epic of adventures";
+        }
+
+
+    </script>
     </body>
 </html>
