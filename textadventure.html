@@ -97,16 +97,37 @@
         var p1 = document.getElementById("p1");
         var p2 = document.getElementById("p2");
         var p3 = document.getElementById("p3");
-        var state = "start";
+        var state = "intro";
 
-        start();
-        function start(){
+        intro();
+        function intro(){
             img.src = "images/krabbypatty.jpg";
             b1.innerHTML = "YES!!!";
             b2.innerHTML = "no :(";
             p1.innerHTML = "Welcome to the most epic text adventure project ever.";
             p2.innerHTML = "It is 2020 and the hottest item on the McDonalds menu is the Travy Patty, You are Joe and you need the Travy Patty.";
             p3.innerHTML = "Are you ready for this most epic of adventures";
+        }
+
+        function start(){
+            img.src="images/.jpg"
+            p1.innerHTML = "You pull up to the McDonald's drive through window"
+            p2.innerHTML = "You crave the Travy Patty but you are kinda hot and might enjoy an ice ream"
+            p3.innerHTML = "What do you order?"
+        }
+        
+        /////state machine
+        function bclick(button){
+            if(state == "intro"){
+                if(button == 1){
+                    start();
+                    state="start";
+                }
+                else if(button == 2){
+                    sad();
+                    state = "sad"
+                }
+            }
         }
 
 
