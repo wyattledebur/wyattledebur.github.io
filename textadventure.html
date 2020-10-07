@@ -84,8 +84,8 @@
                 <p id="p3"></p>
             </div>
             <div id="button_choices">
-                <a id="b1" class="buttons" href="" onclick="bclick(1)">Yes</a>
-                <a id="b2"class="buttons" href="" onclick="bclick(2)">No</a>
+                <a id="b1" class="buttons" href="#" onclick="bclick(1)">Yes</a>
+                <a id="b2"class="buttons" href="#" onclick="bclick(2)">No</a>
             </div>
         </div>
     </div>
@@ -106,7 +106,7 @@
             b2.innerHTML = "no :(";
             p1.innerHTML = "Welcome to the most epic text adventure project ever.";
             p2.innerHTML = "It is 2020 and the hottest item on the McDonalds menu is the Travy Patty, You are Joe and you need the Travy Patty.";
-            p3.innerHTML = "Are you ready for this most epic of adventures";
+            p3.innerHTML = "Are you ready for this most epic of adventures?";
         }
 
         function start(){
@@ -125,7 +125,7 @@
                 }
                 else if(button == 2){
                     sad();
-                    state = "sad"
+                    state = "sad";
                 }
             }
         }
