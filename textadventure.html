@@ -101,19 +101,92 @@
 
         intro();
         function intro(){
-            img.src = "images/krabbypatty.jpg";
+            img.src = "images/mcdonalds.jpg";
             b1.innerHTML = "YES!!!";
             b2.innerHTML = "no :(";
             p1.innerHTML = "Welcome to the most epic text adventure project ever.";
             p2.innerHTML = "It is 2020 and the hottest item on the McDonalds menu is the Travy Patty, You are Joe and you need the Travy Patty.";
             p3.innerHTML = "Are you ready for this most epic of adventures?";
         }
-
         function start(){
+            img.src="images/travyp.jpg"
+            p1.innerHTML = "The clock ticks to 7:49 PM, You have been stuck in this drive through for over a half an hour."
+            p2.innerHTML = "Everybody in the Tri-state area must be trying to get a Travy Patty right now."
+            p3.innerHTML = "As you pull up to the window you realize you are kinda warm and would like an ice cream, what do you order?"
+            b1.innerHTML = "Travy Patty"
+            b2.innerHTML = "Travy Patty and an ice cream"
+        }
+        function sad(){
+            img.src="images/sad.jpg"
+            p1.innerHTML = "Come on man."
+            p2.innerHTML = "Ur manking me sad."
+            p3.innerHTML = ":("
+            b1.innerHTML = "Actually try this time please."
+            b2.innerHTML = "(I hope you had fun)"
+        }
+        function allout(){
+            img.src="images/drivethrough.jpg"
+            p1.innerHTML = "When you ask for a Travy Patty they tell you that they are all out, which is absolutley absurd, they should have an emmense amount to make sure everyone gets one."
+            p2.innerHTML = "You pull out and am determined to go to another McDonalds to find it."
+            p3.innerHTML = "Now which street would most likely have them still in stock?"
+            b1.innerHTML = "Albania Street"
+            b2.innerHTML = "Gromp Street"
+        }
+        function icecream(){
+            img.src="images/cry.jpg"
+            p1.innerHTML = "When you ask for an Ice Cream you stutter, and not just a normal stutter, it is an auction announcer stutter."
+            p2.innerHTML = "You instantly peel out of the drive through and rush home."
+            p3.innerHTML = "When you get home you flop into bed and start crying yourself to sleep, maybe you could get a Travy Patty at a different store tomorrow."
+            b1.innerHTML = "Run it back?"
+            b2.innerHTML = "(I hope you had fun)"
+        }
+        function albania(){
             img.src="images/.jpg"
-            p1.innerHTML = "You pull up to the McDonald's drive through window"
-            p2.innerHTML = "You crave the Travy Patty but you are kinda hot and might enjoy an ice ream"
-            p3.innerHTML = "What do you order?"
+            p1.innerHTML = "After a short drive you pull up to a new McDonalds."
+            p2.innerHTML = "When you ask for a Travy Patty they tell you they sold the last one to a different customer, how is every McDonalds running out of Travy Patties? Shouldn't they have predicted the demand?"
+            p3.innerHTML = "And then she passed you, an old lady talking to her grandson on the phone, she is talking about getting the thing he wanted or something you can barely hear her because you are staring so hard at the thing in her hand, a Travy Patty, What do you do?"
+            b1.innerHTML = "Steal it from her"
+            b2.innerHTML = "Leave her alone"
+        }
+        function gromp(){
+            img.src="images/closed.jpg"
+            p1.innerHTML = "As you are driving you nearly hit the sign telling you that the road is closed becuase you can't stop thinking about the Travy Patty."
+            p2.innerHTML = "You think it is not a big deal that the road is closed because there are two connecting streets, on to the left and one to the right."
+            p3.innerHTML = "Which one do you take?"
+            b1.innerHTML = "Left"
+            b2.innerHTML = "Right"
+        }
+        function steal(){
+            img.src="images/forest.jpg"
+            p1.innerHTML = "You can't help yourself."
+            p2.innerHTML = "You rip the Travy Patty out of her hands and start running twords the forest."
+            p3.innerHTML = "100% worth becoming America's most wanted."
+            b1.innerHTML = "Run it back?"
+            b2.innerHTML = ""
+        }
+        function dont(){
+            img.src="images/milk.jpg"
+            p1.innerHTML = "You deside that becoming the world's greatest criminal is not worth it and head to the zoo."
+            p2.innerHTML = "When you arrive your friends are excited to see you, it's been a while sense you were able to visit the monkey exhibit."
+            p3.innerHTML = "You crack open a couple cold gallons of whole milk with the boys realize that you don't need a Travy Patty to be happy, you just gotta live in the moment."
+            b1.innerHTML = "Run it back?"
+            b2.innerHTML = "(I hope you had fun)"
+        }
+        function left(){
+            img.src="images/tscott.jpg"
+            p1.innerHTML = "You take a hard swerve to the left and hear your wheel come off."
+            p2.innerHTML = "Your car goes flying after you wheel and you get sent throught the front windsheild, you look up and see Travis Scott, he welcomes you into his arms as you are hurtling towards the gorund."
+            p3.innerHTML = "You wake up in your room with your dog licking your face, I guess you really wanted a Travy Patty."
+            b1.innerHTML = "Run it back?"
+            b2.innerHTML = "(I hope you had fun)"
+        }
+        function right(){
+            img.src="images/fadingaway.jpg"
+            p1.innerHTML = "You take a smooth right turn and notice something strange on the corner of the street."
+            p2.innerHTML = "It's a person and you know them, it looks like your brother, but what is your brother doing here he is supposed to be in Germany?"
+            p3.innerHTML = "Wait, it's actually you, once that realization comes into mind the whole world starts to fall apart and fade away at the same time."
+            b1.innerHTML = "Run it back?"
+            b2.innerHTML = "(I hope you had fun)"
         }
         
         /////state machine
@@ -126,6 +199,82 @@
                 else if(button == 2){
                     sad();
                     state = "sad";
+                }
+            }
+            else if(state == "start"){
+                if(button == 1){
+                    allout();
+                    state = "allout";
+                }
+                else if(button == 2){
+                    icecream();
+                    state = "icecream";
+                }
+            }
+            else if(state == "allout"){
+                if(button == 1){
+                    albania();
+                    state = "albania";
+                }
+                else if(button == 2){
+                    gromp();
+                    state = "gromp"
+                }
+            }
+            else if(state == "icecream"){
+                if(button == 1){
+                    start();
+                    state = "start";
+                }
+            }    
+            else if(state == "albania"){
+                if(button == 1){
+                    steal();
+                    state = "steal";
+                }
+                else if(button == 2){
+                    dont();
+                    state = "dont"
+                }
+            }
+            else if(state == "steal"){
+                if(button == 1){
+                    start();
+                    state = "start";
+                }
+            }
+            else if(state == "dont"){
+                if(button == 1){
+                    start();
+                    state = "start";
+                }
+            }
+            else if(state == "gromp"){
+                if(button == 1){
+                    left();
+                    state = "left";
+                }
+                else if(button == 2){
+                    right();
+                    state = "right"
+                }
+            }
+            else if(state == "left"){
+                if(button == 1){
+                    start();
+                    state = "start";
+                }
+            }
+            else if(state == "right"){
+                if(button == 1){
+                    start();
+                    state = "start";
+                }
+            }
+            else if(state == "sad"){
+                if(button == 1){
+                    start();
+                    state = "start";
                 }
             }
         }
